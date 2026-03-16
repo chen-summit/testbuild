@@ -1,0 +1,5 @@
+FROM ubi10:latest
+USER apache
+RUN dnf install httpd -y
+EXPOSE 80
+CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
